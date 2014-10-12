@@ -12,11 +12,12 @@ test('return mount point for a file', function (t) {
 	});
 });
 
-test('return error code ENOENT', function (t) {
-	t.plan(2);
+test('return custom error when file doesn\'t exist', function (t) {
+	t.plan(3);
 
 	mount('non-existant-file', function (err) {
 		t.assert(err);
+		t.assert(/^`non-existant-file` doesn't exist/i.test(err.message));
 		t.assert(err.code, 'ENOENT');
 	});
 });
