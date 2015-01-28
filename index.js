@@ -2,14 +2,6 @@
 
 var df = require('node-df');
 
-/**
- * Get the mount point for a file
- *
- * @param {String} file
- * @param {Function} cb
- * @api public
- */
-
 module.exports = function (file, cb) {
 	df({ file: file.replace(/\s/g, '\\ ') }, function (err, res) {
 		if (err) {
