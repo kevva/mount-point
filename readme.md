@@ -19,7 +19,7 @@ mount('foo.tar.gz', function (err, res) {
 	}
 
 	console.log(res);
-	//=> { fs: /dev/sda2, size: 487546976, used: 164493356, available: 322797620, percent: 0.34, mount: '/' }
+	//=> {fs: /dev/sda2, size: 487546976, used: 164493356, available: 322797620, percent: 0.34, mount: '/'}
 });
 ```
 
