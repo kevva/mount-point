@@ -3,7 +3,7 @@
 var df = require('node-df');
 
 module.exports = function (file, cb) {
-	df({ file: file.replace(/\s/g, '\\ ') }, function (err, res) {
+	df({file: file.replace(/\s/g, '\\ ')}, function (err, res) {
 		if (err) {
 			if (/No such file or directory/i.test(err.message)) {
 				err.message = '`' + file + '` doesn\'t exist';
