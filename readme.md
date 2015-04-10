@@ -2,26 +2,25 @@
 
 > Get the mount point for a file
 
+
 ## Install
 
-```sh
+```
 $ npm install --save mount-point
 ```
+
 
 ## Usage
 
 ```js
-var mount = require('mount-point');
+var mountPoint = require('mount-point');
 
-mount('foo.tar.gz', function (err, res) {
-	if (err) {
-		throw err;
-	}
-
+mountPoint('foo.tar.gz', function (err, res) {
 	console.log(res);
 	//=> {fs: /dev/sda2, size: 487546976, used: 164493356, available: 322797620, percent: 0.34, mount: '/'}
 });
 ```
+
 
 ## License
 
