@@ -1,6 +1,6 @@
 {
   "name": "mount-point",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Get the mount point for a file",
   "license": "MIT",
   "repository": "kevva/mount-point",
