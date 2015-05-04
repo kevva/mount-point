@@ -1,6 +1,6 @@
 # mount-point [![Build Status](http://img.shields.io/travis/kevva/mount-point.svg?style=flat)](https://travis-ci.org/kevva/mount-point)
 
-> Get the mount point for a file
+> Get the [mount point](http://en.wikipedia.org/wiki/Mount_%28computing%29) for a file
 
 
 ## Install
@@ -15,9 +15,9 @@ $ npm install --save mount-point
 ```js
 var mountPoint = require('mount-point');
 
-mountPoint('foo.tar.gz', function (err, data) {
-	console.log(data);
-	//=> /
+mountPoint('foo.tar.gz', function (err, mount) {
+	console.log(mount);
+	//=> '/'
 });
 ```
 
