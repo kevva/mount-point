@@ -9,13 +9,6 @@ module.exports = function (file, cb) {
 			return;
 		}
 
-		cb(null, {
-			fs: data.filesystem,
-			size: data.size,
-			used: data.used,
-			available: data.available,
-			percent: data.capacity,
-			mount: data.mountpoint
-		});
+		cb(null, data.mountpoint);
 	});
 };

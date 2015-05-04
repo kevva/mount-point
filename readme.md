@@ -17,16 +17,7 @@ var mountPoint = require('mount-point');
 
 mountPoint('foo.tar.gz', function (err, data) {
 	console.log(data);
-	/*
-	=> {
-		fs: /dev/sda2,
-		size: 487546976,
-		used: 164493356,
-		available: 322797620,
-		percent: 0.34,
-		mount: '/'
-	}
-	*/
+	//=> /
 });
 ```
 
