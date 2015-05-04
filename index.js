@@ -1,26 +1,27 @@
 'use strict';
 
-var df = require('node-df');
+var execFile = require('child_process').execFile;
 
 module.exports = function (file, cb) {
-	df({file: file.replace(/\s/g, '\\ ')}, function (err, res) {
-		if (err && /No such file or directory/i.test(err.message)) {
-			err.code = 'ENOENT';
-			err.message = '`' + file + '` doesn\'t exist';
-		}
-
+	execFile('df', ['-kP', file], function (err, stdout) {
 		if (err) {
 			cb(err);
 			return;
 		}
 
-		cb(null, {
-			fs: res[0].filesystem,
-			size: res[0].size,
-			used: res[0].used,
-			available: res[0].available,
-			percent: res[0].capacity,
-			mount: res[0].mount
+		stdout = stdout.trim().split('\n').slice(1).map(function (el) {
+			var cl = el.split(/\s+(?=[\d\/])/);
+
+			return {
+				fs: cl[0],
+				size: parseInt(cl[1], 10) * 1024,
+				used: parseInt(cl[2], 10) * 1024,
+				available: parseInt(cl[3], 10) * 1024,
+				percent: parseInt(cl[4], 10) / 100,
+				mount: cl[5]
+			};
 		});
+
+		cb(null, stdout[0]);
 	});
 };
