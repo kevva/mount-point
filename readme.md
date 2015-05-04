@@ -22,6 +22,11 @@ mountPoint('foo.tar.gz', function (err, data) {
 ```
 
 
+## Related
+
+* [@sindresorhus/df](https://github.com/sindresorhus/df)
+
+
 ## License
 
 MIT © [Kevin Mårtensson](https://github.com/kevva)
