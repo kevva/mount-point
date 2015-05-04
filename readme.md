@@ -24,7 +24,7 @@ mountPoint('foo.tar.gz', function (err, data) {
 
 ## Related
 
-* [@sindresorhus/df](https://github.com/sindresorhus/df)
+* [df](https://github.com/sindresorhus/df) - Get free disk space info from `df -kP`
 
 
 ## License
