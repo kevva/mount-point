@@ -23,10 +23,12 @@
     "disk",
     "mount"
   ],
+  "dependencies": {
+    "@sindresorhus/df": "^1.0.1",
+    "pify": "^2.3.0",
+    "pinkie-promise": "^2.0.1"
+  },
   "devDependencies": {
     "ava": "^0.0.4"
-  },
-  "dependencies": {
-    "@sindresorhus/df": "^1.0.1"
   }
 }

@@ -13,9 +13,9 @@ $ npm install --save mount-point
 ## Usage
 
 ```js
-var mountPoint = require('mount-point');
+const mountPoint = require('mount-point');
 
-mountPoint('foo.tar.gz', function (err, mount) {
+mountPoint('foo.tar.gz').then(mount => {
 	console.log(mount);
 	//=> '/'
 });
