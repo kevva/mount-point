@@ -1,10 +1,4 @@
 'use strict';
-var df = require('@sindresorhus/df');
-var pify = require('pify');
-var Promise = require('pinkie-promise');
+const df = require('@sindresorhus/df');
 
-module.exports = function (file) {
-	return pify(df.file, Promise)(file).then(function (data) {
-		return data.mountpoint;
-	});
-};
+module.exports = file => df.file(file).then(data => data.mountpoint);

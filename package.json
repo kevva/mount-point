@@ -10,7 +10,7 @@
     "url": "https://github.com/kevva"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -24,9 +24,7 @@
     "mount"
   ],
   "dependencies": {
-    "@sindresorhus/df": "^1.0.1",
-    "pify": "^2.3.0",
-    "pinkie-promise": "^2.0.1"
+    "@sindresorhus/df": "^2.1.0"
   },
   "devDependencies": {
     "ava": "*",
